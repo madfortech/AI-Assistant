@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cesjq1dn20x55"]
+
+[ext_resource type="Script" uid="uid://cn2rxb0stfda5" path="res://addons/ai-assistant/dock.gd" id="1_ogwx7"]
+
+[node name="AIAssistantDock" type="Control" unique_id=80343313]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ogwx7")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=183723800]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=529995492]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1781521473]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=453129652]
+layout_mode = 2
+text = "AI Assistant"
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/Header" unique_id=1181439698]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1305702383]
+layout_mode = 2
+
+[node name="Conversation" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=491983412]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Welcome! Ask any question related to Godot , GDScript, scenes, nodes, UI, physics, shaders, plugins, or editor tools."
+
+[node name="Prompt" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=1421024906]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Type your message..."
+
+[node name="BottomBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1124076656]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="SendButton" type="Button" parent="MarginContainer/VBoxContainer/BottomBar" unique_id=786480923]
+custom_minimum_size = Vector2(90, 32)
+layout_mode = 2
+text = "Send"
+
+[node name="ClearButton" type="Button" parent="MarginContainer/VBoxContainer/BottomBar" unique_id=1094445819]
+custom_minimum_size = Vector2(90, 32)
+layout_mode = 2
+text = "Clear"
