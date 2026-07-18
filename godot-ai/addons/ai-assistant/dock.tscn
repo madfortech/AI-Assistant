@@ -35,13 +35,18 @@ text = "AI Assistant"
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer/Header" unique_id=808599828]
+layout_mode = 2
+tooltip_text = "Settings"
+text = "⚙"
+flat = true
+
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1305702383]
 layout_mode = 2
 
 [node name="Conversation" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=491983412]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Welcome! Ask any question related to Godot , GDScript, scenes, nodes, UI, physics, shaders, plugins, or editor tools."
 
 [node name="Prompt" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=1421024906]
 layout_mode = 2
@@ -63,3 +68,34 @@ text = "Send"
 custom_minimum_size = Vector2(90, 32)
 layout_mode = 2
 text = "Clear"
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/BottomBar" unique_id=274114758]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/VBoxContainer/BottomBar" unique_id=1954117803]
+layout_mode = 2
+text = "Admin • Basic • 89 Credits"
+horizontal_alignment = 2
+
+[node name="SettingsDialog" type="ConfirmationDialog" parent="." unique_id=1602466714]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsDialog" unique_id=487211219]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="SettingsDialog/VBoxContainer" unique_id=1421504055]
+layout_mode = 2
+text = "Enter your Unique Key"
+
+[node name="UniqueKeyInput" type="LineEdit" parent="SettingsDialog/VBoxContainer" unique_id=357275695]
+layout_mode = 2
+placeholder_text = "Enter Unique Key"
+secret = true
+
+[node name="SettingsStatus" type="Label" parent="SettingsDialog/VBoxContainer" unique_id=1982677715]
+layout_mode = 2
+
+[node name="ApiUrlInput" type="LineEdit" parent="SettingsDialog/VBoxContainer" unique_id=469407155]
+layout_mode = 2
+placeholder_text = "https://aiassistant.test/api"

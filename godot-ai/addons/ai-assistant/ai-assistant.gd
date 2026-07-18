@@ -7,7 +7,7 @@ var dock: Control
 
 
 func _enter_tree() -> void:
-	print("AI Assistant Loaded")
+	
 
 	dock = DOCK_SCENE.instantiate()
 	add_control_to_bottom_panel(dock, "AI Assistant")
